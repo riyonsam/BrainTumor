@@ -1,0 +1,29 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa; /* Soft turquoise background color */
+    color: #004d40; /* Dark green text color */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Box Styling */
+.box {
+    border: 1px solid #00796b; /* Darker green border */
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: white;
+}
+
+/* Image Styling */
+img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #00796b; /* Darker green border */
+    border-radius: 8px; /* Rounded corners */
+}
