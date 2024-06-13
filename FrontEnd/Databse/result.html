@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Patient Results</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" type="text/css" href="result.css">
+</head>
+
+<body>
+    <h1>Patient Results</h1>
+
+    <div class="box" id="image-box">
+        <h2>Patient Image</h2>
+        <!-- Placeholder for the patient image -->
+        <img id="patient-image" alt="Patient Image">
+    </div>
+
+    <div class="box" id="info-box">
+        <h2>Patient Information</h2>
+        <p>Name: <span id="patient-name"></span></p>
+        <p>Prediction Result: <span id="prediction-result"></span></p>
+    </div>
+
+    <!-- JavaScript to fetch data from the PHP file -->
+    <script>
+        // Fetch data from the PHP file (result.php)
+        fetch('result_1.php')
+            .then(response => response.json())
+            .then(data => {
+                // Update the HTML elements with the data from the PHP file
+                document.getElementById('patient-image').src = 'data:image/png;base64,' + data.image;
+                document.getElementById('patient-name').innerText = data.name;
+                document.getElementById('prediction-result').innerText = data.prediction_result;
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+    </script>
+</body>
+
+</html>
