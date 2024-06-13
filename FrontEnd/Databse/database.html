@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Data</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="database.css">
+</head>
+
+<body>
+    <h2>Patient Data</h2>
+    <!-- HTML Table -->
+    <table id="patient-table">
+        <!-- Table headers -->
+        <tr>
+            <th>ID</th>
+            <th>Patient Name</th>
+            <th>Age</th>
+            <th>Sex</th>
+            <th>Phone Number</th>
+            <th>Result</th>
+        </tr>
+        <!-- Include the PHP file to generate the table rows -->
+        <?php include 'database.php'; ?>
+    </table>
+</body>
+
+</html>
